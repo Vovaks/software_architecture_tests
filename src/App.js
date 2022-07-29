@@ -1,17 +1,43 @@
-
-import './App.css';
 import { BrowserRouter as Router,
   Switch,
   Route,
   Link} from "react-router-dom";
+  import React from 'react'
 import Routers from'./Routers' 
 
-import Home from "./pages/Home";
+import styled from 'styled-components'
 
-function App() {
+const BigGeenHeading = styled.h1`
+  color: green;
+  font-size: 96px;
+`
+
+// function App() {
+//   return (
+//     <>
+//       <h1>Server-Side Rendering Example</h1>
+//         <ul>
+//           <li>
+//             <Link to='/' >Home</Link>
+//           </li>
+//           <li>
+//             <Link to='/about' >About</Link>
+//           </li>
+//           <li>
+//             <Link to='/articles' >Articles</Link>
+//           </li>
+//         </ul>
+//        <Routers/>
+//     </>
+//   );
+// }
+
+// export default App;
+
+const App = () => {
   return (
-    <Router className="App">
-      <h1>Server-Side Rendering Example</h1>
+    <>
+      <BigGeenHeading>Architecture test</BigGeenHeading>
         <ul>
           <li>
             <Link to='/' >Home</Link>
@@ -23,9 +49,10 @@ function App() {
             <Link to='/articles' >Articles</Link>
           </li>
         </ul>
-       <Routers />
-    </Router>
+       <Routers/>
+    </>
   );
 }
 
 export default App;
+
